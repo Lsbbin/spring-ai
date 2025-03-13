@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/css/index.css}" rel="stylesheet">
+</head>
+
+<body>
+    <div style="width: 1200px;">
+        <div class="wrap" id="capital">
+            <div class="filebox">
+                <input type="text" placeholder="국가명 입력" class="upload-name" style="width: 480px;">
+            </div><br>
+            <button name="submit" class="btn" style="">Submit</button><br>
+            <textarea readonly></textarea>
+        </div>
+
+        <div class="wrap" id="fc" style="margin-left: 50px;">
+            <div class="filebox">
+                <input type="text" placeholder="축구 선수명 입력" class="upload-name" style="width: 480px;">
+            </div><br>
+            <button name="submit" class="btn">Submit</button><br>
+            <textarea readonly></textarea>
+        </div>
+
+        <div class="wrap" id="image" style="margin-top: 50px;">
+            <div class="filebox">
+                <input type="text" placeholder="이미지 생성" class="upload-name" style="width: 480px;">
+            </div><br>
+            <button name="submit" class="btn">Submit</button><br>
+            <textarea readonly></textarea>
+        </div>
+
+        <div class="wrap" id="analysis" style="margin-top: 50px; margin-left: 50px;">
+            <div class="filebox">
+                <input class="upload-name" placeholder="이미지 분석" readonly style="cursor: default;">
+                <label for="file">파일찾기</label>
+                <input type="file" id="file">
+            </div><br>
+            <button name="submit" class="btn">Submit</button><br>
+            <textarea readonly></textarea>
+        </div>
+
+        <div class="wrap" id="chat" style="margin-top: 50px;">
+            <div class="filebox">
+                <input type="text" placeholder="AI 챗봇" class="upload-name" style="width: 1040px;">
+            </div><br>
+            <button name="submit" class="btn">Submit</button><br>
+            <textarea style="width: 1030px;" readonly></textarea>
+        </div>
+
+        <div class="wrap" id="documentAdd" style="margin-top: 100px;">
+            <div class="filebox">
+                <input class="upload-name" placeholder="문서 적재" readonly style="cursor: default;">
+                <label for="file2">파일찾기</label>
+                <input type="file" id="file2">
+            </div><br>
+            <button name="submit" class="btn" style="">Submit</button><br>
+            <textarea readonly></textarea>
+        </div>
+
+        <div class="wrap" id="collectionClear" style="margin-top: 100px; margin-left: 50px;">
+            <!--<div class="filebox">
+                <h4 style="color: crimson">* 서버 재기동 필요</h4>
+            </div><br>-->
+            <button name="collectionClear" class="btn" style="width: 300px;">Collection Delete</button><br>
+            <textarea readonly></textarea>
+        </div>
+
+        <div class="wrap" id="documentSearch" style="margin-top: 50px;">
+            <div class="filebox">
+                <input type="text" id="searchId" placeholder="ID" class="upload-name" style="width: 100px;">
+                <input type="text" id="searchParam" placeholder="문서 탐색" class="upload-name" style="width: 910px;">
+            </div><br>
+            <button name="submit" class="btn">Submit</button><br>
+            <textarea style="width: 1030px;" readonly></textarea>
+        </div>
+
+        <div id="loading" style="display: none;">
+            <div id="loading_bar">
+                <img src="/spin-loading.gif">
+            </div>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" th:src="@{/js/index.js}"></script>
